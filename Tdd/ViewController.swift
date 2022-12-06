@@ -7,6 +7,12 @@
 
 import UIKit
 
+struct User {
+    func buy(_ product: String) {
+        
+    }
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
