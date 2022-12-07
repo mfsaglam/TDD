@@ -9,10 +9,10 @@ import UIKit
 
 struct User {
     
-    var library: [String] = []
+    var library: Set<String> = []
     
     mutating func buy(_ product: String) {
-        library.append(product)
+        library.insert(product)
     }
     
     func owns(_ product: String) -> Bool {
