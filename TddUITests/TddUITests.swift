@@ -28,5 +28,7 @@ final class TddUITests: XCTestCase {
         let user = User()
         
         user.buy(bookToBuy)
+        
+        XCTAssertTrue(user.owns(bookToBuy))
     }
 }
