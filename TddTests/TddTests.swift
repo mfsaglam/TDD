@@ -18,12 +18,20 @@ final class TddTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testReadingBookAddsToLibrary() {
+    func testNotBuyingBookDoesntAddsToLibrary() {
         let bookToBuy = "Great Expectations"
         let user = User()
+        
+        XCTAssertFalse(user.owns(bookToBuy))
+    }
+    
+    func testBuyingBookAddsToLibrary() {
+        let bookToBuy = "Great Expectations"
+        var user = User()
         
         user.buy(bookToBuy)
         
         XCTAssertTrue(user.owns(bookToBuy))
     }
+    
 }

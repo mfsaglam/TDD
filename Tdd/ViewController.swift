@@ -8,12 +8,15 @@
 import UIKit
 
 struct User {
-    func buy(_ product: String) {
-        
+    
+    var library: [String] = []
+    
+    mutating func buy(_ product: String) {
+        library.append(product)
     }
     
     func owns(_ product: String) -> Bool {
-        return true
+        return library.contains(product)
     }
 }
 
