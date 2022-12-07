@@ -11,6 +11,10 @@ struct User {
     func buy(_ product: String) {
         
     }
+    
+    func owns(_ product: String) -> Bool {
+        return true
+    }
 }
 
 class ViewController: UIViewController {
