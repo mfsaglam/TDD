@@ -22,13 +22,4 @@ final class TddUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
-    func testReadingBookAddsToLibrary() {
-        let bookToBuy = "Great Expectations"
-        let user = User()
-        
-        user.buy(bookToBuy)
-        
-        XCTAssertTrue(user.owns(bookToBuy))
-    }
 }
